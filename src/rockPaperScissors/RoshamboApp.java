@@ -13,7 +13,7 @@ public class RoshamboApp {
 		int loss = 0;
 		int tie = 0;
 		
-		name = Validator.getString(key, "Please enter your name: ");
+		name = Validator.getString(key, "Welcome to Rochambo. Please enter your name: ");
 		user.setName(name);
 		
 		do {
@@ -24,11 +24,11 @@ public class RoshamboApp {
 		if (name.equalsIgnoreCase("B")) {
 			opponent = new EasyRock();
 			opponent.setName("Sim");
-			System.out.println(opponent.getName() + " says: Oh gosh, I don't even kno' what Rochambo is...");
+			System.out.println(opponent.getName() + " says: Oh gosh, I don't even kno' what Rochambo is...\n");
 		} else if (name.equalsIgnoreCase("E")) {
 			opponent = new HardGuess();
 			opponent.setName("Jackal");
-			System.out.println(opponent.getName() + " says: ...You won't win.");
+			System.out.println(opponent.getName() + " says: ...You won't win.\n");
 		}
 		
 		
