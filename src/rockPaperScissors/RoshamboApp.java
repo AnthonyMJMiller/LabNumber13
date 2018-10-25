@@ -20,7 +20,7 @@ public class RoshamboApp {
 		name = Validator.getString(key, "Who would you like to play against? The Beginner or The Expert? (B/E) ");
 		
 			Player opponent = null;
-			
+			do {
 		if (name.equalsIgnoreCase("B")) {
 			opponent = new EasyRock();
 			opponent.setName("Sim");
@@ -29,7 +29,10 @@ public class RoshamboApp {
 			opponent = new HardGuess();
 			opponent.setName("Jackal");
 			System.out.println(opponent.getName() + " says: ...You won't win.\n");
+		} else {
+			System.out.println("You need to enter either 'B' or 'E'.");
 		}
+			} while (!name.equalsIgnoreCase("B") && !name.equalsIgnoreCase("E"));
 		
 		
 		do {
